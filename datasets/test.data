@@ -1,0 +1,13 @@
+{
+  "data": [
+    [
+      "test"
+    ]
+  ],
+  "schema": {
+    "columns": [
+      {"name":"new_column_0","type":"string"}
+    ],
+    "userModified": false
+  }
+}
