@@ -1,0 +1,28 @@
+{
+    "deployFinetunedModel": true,
+    "completionSettings": {
+        "stopSequences": []
+    },
+    "hyperparameters": {
+        "localHuggingFace": {
+            "r": 16,
+            "loraDropout": 0.05,
+            "initialLearningRate": 5e-05,
+            "neftuneNoiseAlpha": 5.0,
+            "loraAlpha": 32,
+            "checkpointMode": "KEEP_BEST_ONLY",
+            "quantization": "Q_4BIT",
+            "useRsLora": false
+        },
+        "remoteHyperparameters": {
+            "learningRateMultiplier": 2.0,
+            "batchSize": 4
+        },
+        "useDefaults": true,
+        "nbEpochs": 3
+    },
+    "containerSelection": {
+        "containerMode": "INHERIT"
+    },
+    "cleanInactiveSMVDeployments": true
+}
