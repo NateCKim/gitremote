@@ -1,0 +1,316 @@
+{
+  "type": "Filesystem",
+  "managed": true,
+  "featureGroup": false,
+  "formatType": "csv",
+  "checklists": {
+    "checklists": []
+  },
+  "checks": [],
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT",
+    "ignoreErrorStatusOnBuild": false
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "formatParams": {
+    "style": "unix",
+    "charset": "utf8",
+    "separator": "\t",
+    "quoteChar": "\"",
+    "escapeChar": "\\",
+    "maxRowChars": 100000000,
+    "dateSerializationFormat": "ISO",
+    "arrayMapFormat": "json",
+    "hiveSeparators": [
+      "\u0002",
+      "\u0003",
+      "\u0004",
+      "\u0005",
+      "\u0006",
+      "\u0007",
+      "\b"
+    ],
+    "skipRowsBeforeHeader": 0,
+    "parseHeaderRow": false,
+    "skipRowsAfterHeader": 0,
+    "probableNumberOfRecords": 0,
+    "normalizeBooleans": false,
+    "normalizeDoubles": true,
+    "readAdditionalColumnsBehavior": "INSERT_IN_DATA_WARNING",
+    "readMissingColumnsBehavior": "DISCARD_SILENT",
+    "readDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "writeDataTypeMismatchBehavior": "DISCARD_WARNING",
+    "fileReadFailureBehavior": "FAIL",
+    "compress": "gz"
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "admin"
+    },
+    "lastModifiedOn": 1779182963924
+  },
+  "tags": [],
+  "params": {
+    "connection": "filesystem_managed",
+    "path": "${projectKey}/SOL_CS_studies_features_w_sdoh_scored_prepared_copy",
+    "notReadyIfEmpty": false,
+    "filesSelectionRules": {
+      "mode": "ALL",
+      "excludeRules": [],
+      "includeRules": [],
+      "explicitFiles": []
+    },
+    "variablesExpansionLoopConfig": {
+      "enabled": false,
+      "mode": "CREATE_VARIABLE_FOR_EACH_COLUMN",
+      "replacements": []
+    }
+  },
+  "schema": {
+    "columns": [
+      {"name":"NCTId","type":"string","maxLength":419000},
+      {"name":"BriefTitle","type":"string","maxLength":419000},
+      {"name":"OrgFullName","type":"string","maxLength":419000},
+      {"name":"OrgClass","type":"string","maxLength":419000},
+      {"name":"OverallStatus","type":"string","maxLength":419000},
+      {"name":"LastKnownStatus","type":"string","maxLength":419000},
+      {"name":"WhyStopped","type":"string","maxLength":419000},
+      {"name":"HasExpandedAccess","type":"boolean"},
+      {"name":"StartDate","type":"string","maxLength":419000},
+      {"name":"StartDate_parsed","type":"date"},
+      {"name":"enrollment_period","type":"bigint"},
+      {"name":"StartDateType","type":"string","maxLength":419000},
+      {"name":"PrimaryCompletionDate","type":"string","maxLength":419000},
+      {"name":"PrimaryCompletionDateType","type":"string","maxLength":419000},
+      {"name":"CompletionDate","type":"string","maxLength":419000},
+      {"name":"CompletionDate_parsed","type":"date"},
+      {"name":"CompletionDateType","type":"string","maxLength":419000},
+      {"name":"LeadSponsorName","type":"string","maxLength":419000},
+      {"name":"LeadSponsorClass","type":"string","maxLength":419000},
+      {"name":"StudyType","type":"string","maxLength":419000},
+      {"name":"Phase","type":"string","maxLength":419000},
+      {"name":"EnrollmentCount","type":"double"},
+      {"name":"enrollment_patient_per_year","type":"double"},
+      {"name":"enrollment_rate","type":"string","maxLength":419000},
+      {"name":"EnrollmentType","type":"string","maxLength":419000},
+      {"name":"NumberArmGroup","type":"bigint"},
+      {"name":"DesignAllocation","type":"string","maxLength":419000},
+      {"name":"DesignModel","type":"string","maxLength":419000},
+      {"name":"DesignPurposeTime","type":"string","maxLength":419000},
+      {"name":"DesignMasking","type":"string","maxLength":419000},
+      {"name":"EligibilityCriteria","type":"string","maxLength":419000},
+      {"name":"HealthyVolunteers","type":"string","maxLength":419000},
+      {"name":"Sex","type":"string","maxLength":419000},
+      {"name":"MinimumAge","type":"double"},
+      {"name":"MaximumAge","type":"double"},
+      {"name":"CHILD","type":"double","maxLength":4194304},
+      {"name":"Include_Child","type":"boolean"},
+      {"name":"ADULT","type":"double"},
+      {"name":"Include_Adult","type":"boolean"},
+      {"name":"OLDER_ADULT","type":"double"},
+      {"name":"Include_Elderly","type":"boolean"},
+      {"name":"PI_affiliation_count","type":"bigint"},
+      {"name":"PrimaryInvestigator_count","type":"string","maxLength":419000},
+      {"name":"Site_country_count","type":"bigint"},
+      {"name":"Location_country_concat","type":"string","maxLength":419000},
+      {"name":"Site_count","type":"bigint"},
+      {"name":"DRUG_intervention_distinct","type":"boolean"},
+      {"name":"OTHER_intervention_distinct","type":"boolean"},
+      {"name":"DEVICE_intervention_distinct","type":"boolean"},
+      {"name":"BEHAVIORAL_intervention_distinct","type":"boolean"},
+      {"name":"PROCEDURE_intervention_distinct","type":"boolean"},
+      {"name":"BIOLOGICAL_intervention_distinct","type":"boolean"},
+      {"name":"DIETARY_SUPPLEMENT_intervention_distinct","type":"boolean"},
+      {"name":"DIAGNOSTIC_TEST_intervention_distinct","type":"boolean"},
+      {"name":"RADIATION_intervention_distinct","type":"boolean"},
+      {"name":"GENETIC_intervention_distinct","type":"boolean"},
+      {"name":"COMBINATION_PRODUCT_intervention_distinct","type":"boolean"},
+      {"name":"Neoplasms_conditions_distinct","type":"boolean"},
+      {"name":"Nervous_System_Diseases_conditions_distinct","type":"boolean"},
+      {"name":"Respiratory_Tract_Diseases_conditions_distinct","type":"boolean"},
+      {"name":"Digestive_System_Diseases_conditions_distinct","type":"boolean"},
+      {"name":"Cardiovascular_Diseases_conditions_distinct","type":"boolean"},
+      {"name":"Female_Urogenital_Diseases_and_Pregnancy_Complications_conditions_distinct","type":"bigint"},
+      {"name":"Virus_Diseases_conditions_distinct","type":"boolean"},
+      {"name":"Mental_Disorders_conditions_distinct","type":"bigint"},
+      {"name":"Musculoskeletal_Diseases_conditions_distinct","type":"boolean"},
+      {"name":"Nutritional_and_Metabolic_Diseases_conditions_distinct","type":"bigint"},
+      {"name":"Male_Urogenital_Diseases_conditions_distinct","type":"boolean"},
+      {"name":"Immune_System_Diseases_conditions_distinct","type":"boolean"},
+      {"name":"Hemic_and_Lymphatic_Diseases_conditions_distinct","type":"bigint"},
+      {"name":"Skin_and_Connective_Tissue_Diseases_conditions_distinct","type":"boolean"},
+      {"name":"Congenital_Hereditary_and_Neonatal_Diseases_and_Abnormalities_conditions_distinct","type":"bigint"},
+      {"name":"Endocrine_System_Diseases_conditions_distinct","type":"boolean"},
+      {"name":"Bacterial_Infections_and_Mycoses_conditions_distinct","type":"bigint"},
+      {"name":"Wounds_and_Injuries_conditions_distinct","type":"bigint"},
+      {"name":"Stomatognathic_Diseases_conditions_distinct","type":"bigint"},
+      {"name":"Eye_Diseases_conditions_distinct","type":"bigint"},
+      {"name":"Otorhinolaryngologic_Diseases_conditions_distinct","type":"bigint"},
+      {"name":"Parasitic_Diseases_conditions_distinct","type":"string"},
+      {"name":"Chemical_Actions_and_Uses_interventions_distinct","type":"bigint"},
+      {"name":"Organic_Chemicals_interventions_distinct","type":"boolean"},
+      {"name":"Amino_Acids_Peptides_and_Proteins_interventions_distinct","type":"bigint"},
+      {"name":"Heterocyclic_Compounds_interventions_distinct","type":"boolean"},
+      {"name":"Hormones_Hormone_Substitutes_and_Hormone_Antagonists_interventions_distinct","type":"bigint"},
+      {"name":"Polycyclic_Compounds_interventions_distinct","type":"boolean"},
+      {"name":"Inorganic_Chemicals_interventions_distinct","type":"boolean"},
+      {"name":"Nucleic_Acids_Nucleotides_and_Nucleosides_interventions_distinct","type":"bigint"},
+      {"name":"Physiological_Phenomena_interventions_distinct","type":"boolean"},
+      {"name":"Food_and_Beverages_interventions_distinct","type":"bigint"},
+      {"name":"Carbohydrates_interventions_distinct","type":"boolean"},
+      {"name":"Biological_Factors_interventions_distinct","type":"boolean"},
+      {"name":"Pharmaceutical_Preparations_interventions_distinct","type":"boolean"},
+      {"name":"Enzymes_and_Coenzymes_interventions_distinct","type":"bigint"},
+      {"name":"Lipids_interventions_distinct","type":"boolean"},
+      {"name":"Complex_Mixtures_interventions_distinct","type":"boolean"},
+      {"name":"Technology_Industry_and_Agriculture_interventions_distinct","type":"bigint"},
+      {"name":"Biomedical_and_Dental_Materials_interventions_distinct","type":"bigint"},
+      {"name":"Macromolecular_Substances_interventions_distinct","type":"bigint"},
+      {"name":"Fluids_and_Secretions_interventions_distinct","type":"bigint"},
+      {"name":"PrimaryOutcome_Max_TimeFrame_max","type":"double"},
+      {"name":"PrimaryOutcome_count","type":"bigint"},
+      {"name":"SecondaryOutcome_Max_TimeFrame_max","type":"double"},
+      {"name":"SecondaryOutcome_count","type":"bigint"},
+      {"name":"OtherOutcome_Max_TimeFrame_max","type":"string","maxLength":419000},
+      {"name":"OtherOutcome_count","type":"bigint"},
+      {"name":"Recruiting","type":"string"},
+      {"name":"Percent_Below_150_Poverty_county_weighted_sum","type":"double"},
+      {"name":"Percent_No_High_School_Diploma_county_weighted_sum","type":"double"},
+      {"name":"Percent_Housing_Cost_Burden_county_weighted_sum","type":"double"},
+      {"name":"Percent_Aged_65_and_Older_county_weighted_sum","type":"double"},
+      {"name":"Percent_No_Health_Insurance_county_weighted_sum","type":"double"},
+      {"name":"Percent_Civilian_with_a_Disability_county_weighted_sum","type":"double"},
+      {"name":"Percent_Unemployed_county_weighted_sum","type":"double"},
+      {"name":"Percent_Mobile_Homes_county_weighted_sum","type":"double"},
+      {"name":"Percent_No_Vehicle_county_weighted_sum","type":"double"},
+      {"name":"Percent_Crowding_county_weighted_sum","type":"double"},
+      {"name":"Percent_Multi_Unit_Structures_county_weighted_sum","type":"double"},
+      {"name":"Percent_Minority_county_weighted_sum","type":"double"},
+      {"name":"Percent_Aged_17_and_Younger_county_weighted_sum","type":"double"},
+      {"name":"Percent_English_Language_Proficiency_county_weighted_sum","type":"double"},
+      {"name":"Percent_Single_Parent_Households_county_weighted_sum","type":"double"},
+      {"name":"Percent_Group_Quarters_county_weighted_sum","type":"double"},
+      {"name":"Percent_Cancer_except_skin_Disease_county_weighted_sum","type":"double"},
+      {"name":"Percent_Chronic_Kidney_Disease_county_weighted_sum","type":"double"},
+      {"name":"Percent_Coronary_Heart_Disease_county_weighted_sum","type":"double"},
+      {"name":"Percent_Current_Asthma_Disease_county_weighted_sum","type":"double"},
+      {"name":"Percent_Diabetes_Disease_county_weighted_sum","type":"double"},
+      {"name":"Percent_Stroke_Disease_county_weighted_sum","type":"double"},
+      {"name":"Percent_Covid_Vacc_Primary_Series_Disease_county_weighted_sum","type":"double"},
+      {"name":"Social_Vulnerability_Index_county_weighted_sum","type":"double"},
+      {"name":"US_counties_area_sum","type":"double"},
+      {"name":"US_counties_population_sum","type":"double"},
+      {"name":"US_population_density","type":"double"},
+      {"name":"has_nonus_sites","type":"boolean"},
+      {"name":"proba_Low","type":"double"},
+      {"name":"proba_Medium","type":"double"},
+      {"name":"proba_High","type":"double"},
+      {"name":"prediction","type":"string","maxLength":419000},
+      {"name":"Enrolment_rate_combined","type":"string","maxLength":419000}
+    ],
+    "userModified": true
+  },
+  "typeSystemVersion": "V2",
+  "dkuProperties": [],
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "ascending": true,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "basic:COUNT_FILES",
+        "basic:SIZE",
+        "records:COUNT_RECORDS"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "monitor": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "customFields": {}
+}
